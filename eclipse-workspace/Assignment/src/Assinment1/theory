@@ -1,0 +1,76 @@
+1. What is Java and why is it platform-independent?
+
+ANS : Java is a high level,object-oriented programming langugae developed by sun microsystem in 1997 
+	  and it is used to develop  
+	  desktop applications,web application and high enterprise-;l system beacuse it is 
+	  secure and plateform independent  : Java is platform-independent because it runs on the JVM, 
+	  not directly on the operating system. So the same Java program can run on any system.
+	  (Write Once, Run Anywhere.)
+	  
+2. Explain the features of Java.
+
+ANS :  1. Simple Syntax : 
+          Java syntax is very straightforward and very easy to learn. 
+       2. Object Oriented
+		  Java is a pure object-oriented language. It supports core OOP concepts like,
+
+			1.Class
+			2.Objects
+			3.Inheritance
+			4.Encapsulation
+			5.Abstraction
+			6.Polymorphism
+			
+ 	   3. Platform-Independent :
+ 	   	  Runs on any system using JVM (Write Once, Run Anywhere).
+
+       4. Secure :
+          Protects data using security features like JVM and no pointers.
+
+       5. Robust :
+          Strong memory management and error handling.
+
+       6. Portable :
+       	  Java programs can move from one system to another easily.
+
+       7. Multithreaded :
+       	  Can perform multiple tasks at the same time.
+       	  
+3. What is the difference between JDK, JRE, and JVM?
+
+ANS :  JVM (Java Virtual Machine) runs the Java bytecode and makes Java platform-independent.
+       JRE (Java Runtime Environment) provides JVM and libraries required to run Java programs.
+       JDK (Java Development Kit) is used to develop Java programs and includes JRE and development tools like the compiler.
+       
+       VM	Executes bytecode
+       JRE	Runs Java programs
+       JDK	Develops Java programs
+       
+4.What is bytecode in Java?  
+ANS :
+		Bytecode in Java is an intermediate code generated when a Java program is 
+		compiled. 
+		When you write Java code, it is saved as a .java file. 
+		After compilation, it becomes a .class file. 
+		This .class file contains bytecode. 
+		Bytecode is not machine-specific. 
+		It can run on any operating system that has a JVM. 
+		JVM reads the bytecode and converts it into machine code. 
+		
+5.Explain the concept of object-oriented programming.
+ANS :   
+		Object-Oriented Programming (OOP) is a way of writing programs by treating 
+		everything as objects.  
+		Each object has data and methods that work on that data. 
+		OOP helps make code easy to understand, reuse, and manage  
+		by using concepts like encapsulation, inheritance, polymorphism, and 
+		abstraction. 
+		1.Encapsulation (Data Hiding) 
+		Wrapping data and methods together and protecting data from outside 
+		access. 
+		2.Inheritance (Reusability) 
+		One class inherits properties and methods of another class. 
+		3.Polymorphism (Many Forms) 
+		Same method name, different behavior. 
+		4.Abstraction (Hiding Implementation) 
+		Showing what an object does, not how it does. 

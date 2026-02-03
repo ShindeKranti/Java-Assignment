@@ -1,0 +1,66 @@
+1.What is Polymorphism?
+ANS :
+
+	Polymorphism means one thing having many forms.
+	In Java, the same method name can perform different actions.
+	
+	Example:
+	A method add() can add integers and also add decimal numbers.
+	It helps in increasing flexibility and reusability of code.
+	
+2.What is Method Overloading?
+ANS :
+	Method overloading means defining multiple methods with the same name but different parameters in the same class.
+	
+	Example:
+	add(int a, int b)
+	add(double a, double b)
+	
+3.What is Method Overriding?
+
+	- Method overriding means when a child class provides a specific implementation of a method that is already defined in 
+	the parent class.
+	- Method name and parameters must be same.
+	- It is used to achieve runtime polymorphism.
+	
+4.Difference Between Compile-time and Runtime Polymorphism
+	1.Compile-time Polymorphism
+	
+		- Achieved by method overloading.
+		- Method call is decided at compile time.
+		- Same method name but different parameters.
+		- Also called Static Polymorphism.
+		- Execution is faster.
+	
+	2.Runtime Polymorphism
+	
+		- Achieved by method overriding.
+		- Method call is decided at runtime.
+		- Same method name and same parameters.
+		- Also called Dynamic Polymorphism.
+		- Execution is slightly slower than compile-time.
+		
+5.Single, Multilevel and Hierarchical Inheritance in simple words
+
+	- Single Inheritance
+	
+		When one child class takes properties and methods from one parent class, it is called single inheritance.
+		One parent → One child
+		
+		Example:
+		class B extends A
+	
+	 - Multilevel Inheritance
+	
+		When a class inherits from a parent class, and another class inherits from that child class, it is called multilevel inheritance.
+		A → B → C
+		The last class can use properties of all previous classes.
+	
+	- Hierarchical Inheritance
+	
+		When many child classes inherit from one parent class, it is called hierarchical inheritance.
+		One parent → Many children
+		
+		Example:
+		class B extends A
+		class C extends A

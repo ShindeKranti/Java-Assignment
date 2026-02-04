@@ -1,0 +1,39 @@
+What is abstraction in Java? 
+ANS :
+	- Abstraction means we know what to do, but we don’t know how it is done inside.
+	- It means hiding internal details and showing only important things.
+	- We can achieve abstraction using:
+		Abstract class
+		Interface
+	- What happens in Abstraction?
+		We hide the logic inside methods.
+		The user only sees the method name.
+		Implementation details are hidden.
+		
+2 What is an abstract class? 
+ANS : 
+	- An abstract class is a class declared with abstract keyword.
+	- It can have abstract methods (without body) and normal methods (with body).
+	- We cannot create object of abstract class.
+	- It is used when we want common features but implementation will be given by child class.
+	
+3 What is an interface in Java? 
+ANS: 
+	- Interface is used to achieve 100% abstraction.
+	- It contains only abstract methods and constants.
+	- We use implements keyword to use interface.
+	- A class can implement multiple interfaces.
+	
+4 Difference between abstract class and interface.
+ANS: 
+	- Abstract class can have normal + abstract methods, interface mostly has only abstract methods.
+	- Abstract class uses extends, interface uses implements.
+	- We cannot create object of both.
+	- A class can extend only one abstract class.
+	- A class can implement multiple interfaces.
+5 What is a constructor? 
+ANS :
+	- Constructor is a special method used to initialize object.
+	- It has same name as class name.
+	- It is automatically called when object is created.
+	- It is used to assign values to variables.

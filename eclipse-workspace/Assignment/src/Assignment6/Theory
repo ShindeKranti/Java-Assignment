@@ -1,0 +1,48 @@
+1.What is the main method’s signature and why is it static?
+ANS :
+	public → so the JVM can access it from anywhere and start the program.
+	static → so the JVM can run it without creating an object of the class.
+	void → because it doesn’t return anything to the JVM.
+	main → this is the fixed entry point name that the JVM looks for.
+	String[] args → used to take command-line arguments as input.
+	
+	 main is static because:
+	 The JVM starts execution directly from the class, not from an object. 
+	 If main were not static, the JVM would first need to create an object of the class, which could cause confusion about which constructor to call. 
+	 Making it static allows the program to start cleanly and directly.
+ 
+2.What are wrapper classes in Java?
+ANS :
+ 	Wrapper classes are predefined classes in Java that convert primitive data types into objects.
+	Java provides wrapper classes because many features (like collections) work only with objects.
+	
+	int → Integer
+	double → Double
+	char → Character
+	boolean → Boolean
+	It is  use primitives in collections like ArrayList,convert data types,provide utility methods
+	
+3. Difference between equals() and == operator
+ANS :
+	The == operator compares memory addresses and checks whether two references point to the same object.
+	The equals() method compares the actual content or value of objects.
+	== works with both primitives and objects, while equals() is used only with objects.
+	equals() can be overridden to define custom comparison logic, but == cannot.
+	
+4.What is the final keyword used for?
+ANS :
+	The final keyword in Java is used to restrict changes.
+	A final variable cannot have its value changed once assigned.
+	A final method cannot be overridden by a subclass.
+	A final class cannot be inherited.
+	
+5. Difference between final, finally, and finalize.
+ANS :
+	final is a keyword used to apply restrictions in Java. 
+	A final variable cannot be changed, a final method cannot be overridden, and a final class cannot be inherited.
+
+	finally is a block used with try–catch that always executes, regardless of whether an exception occurs. 
+	It is mainly used for cleanup code like closing files or database connections.
+	
+	finalize() is a method that is called by the garbage collector before an object is destroyed, used to perform cleanup activities. 
+	It is not guaranteed when or if it will be called.

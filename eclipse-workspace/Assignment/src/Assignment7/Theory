@@ -1,0 +1,71 @@
+1.What is Garbage Collection?
+ANS :
+	Garbage Collection is a process in Java that automatically removes unused objects from memory.
+	It helps in freeing heap memory and prevents memory leaks.
+	Java handles memory management automatically using the garbage collector.
+	We can request it using System.gc(), but execution is controlled by JVM.
+
+2️ What are Packages in Java?
+ANS :
+	A package is a group of related classes and interfaces.
+	It helps in organizing code properly and avoiding name conflicts.
+	Packages also provide access protection and better code management.
+	Example: java.util, java.lang.
+	
+	package mypack;   // creating package
+
+	public class Demo {
+	    public void show() {
+	        System.out.println("Hello");
+	    }
+	}
+		
+
+3️ What is the Default Package?
+ANS :
+	If we do not specify any package name in a Java program, it belongs to the default package.
+	It has no package statement at the top of the file.
+	It is generally used for small or beginner programs.
+	
+	public class Test {
+	    public static void main(String[] args) {
+	        System.out.println("Default package example");
+	    }
+	}
+		
+
+4️ Explain the use of import statements.
+ANS :
+	The import statement is used to access classes from other packages.
+	It allows us to use classes without writing their full package name.
+	Example: import java.util.Scanner;
+	
+	import java.util.Scanner;
+
+	public class InputExample {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        int num = sc.nextInt();
+	    }
+	}
+		
+
+5️ What are Nested Classes in Java?
+ANS :
+	A nested class is a class defined inside another class.
+	It helps in logically grouping related classes together.
+	There are two types:
+	
+	1.Static Nested Class
+	2.Inner Class (non-static)
+	They improve code readability and security.
+	
+	
+		class Outer {
+	    class Inner {
+	        void display() {
+	            System.out.println("Inside Inner Class");
+	        }
+	    }
+	}
+		

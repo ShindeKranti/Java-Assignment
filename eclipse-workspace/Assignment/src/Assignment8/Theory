@@ -1,0 +1,81 @@
+1.What are local and anonymous classes?
+ANS : 
+	Local Class : 
+	- Local class has a name.
+	- A local class is a class defined inside a method, constructor, or block.
+	- It is used when the class is needed only inside that method.
+	- It can access local variables of the method (only final or effectively final).
+	Example:
+	
+		void display() {
+		    class LocalClass {
+		        void msg() {
+		            System.out.println("Inside local class");
+		        }
+		    }
+		    LocalClass obj = new LocalClass();
+		    obj.msg();
+		}
+	
+	Anonymous Class :
+	- Anonymous class does not have a name.
+	- An anonymous class is a class without a name.
+	- It is used for one-time use, usually to override methods.
+	- Commonly used with interfaces or abstract classes.
+	Example:
+	
+		Runnable r = new Runnable() {
+		    public void run() {
+		        System.out.println("Anonymous class");
+		    }
+		};
+
+2 What is a String in Java?
+ANS : 
+	- A String is an object that represents a sequence of characters.
+	- In Java, String objects are immutable.
+	- String class belongs to java.lang package.
+	Example:
+	
+		String name = "Kranti";
+		
+3 Difference between String, StringBuilder, and StringBuffer. 
+ANS :
+	1.String
+	- String is immutable in Java.
+	- Once a String object is created, its value cannot be changed.
+	- Any modification creates a new object in memory.
+	- It is thread-safe due to immutability.
+	- Used when data does not change frequently.
+
+	2.StringBuilder
+	- StringBuilder is mutable.
+	- It allows modification of the same object.
+	- It is not thread-safe.
+	- Faster than String and StringBuffer.
+	- Used in single-threaded applications.
+
+	3.StringBuffer
+	- StringBuffer is mutable.
+	- It allows modification of the same object.
+	- It is thread-safe because its methods are synchronized.
+	- Slower than StringBuilder due to synchronization.
+
+	Used in multi-threaded applications.
+
+4 Why are Strings immutable? 
+ANS :
+	Strings are immutable for:
+	- Security
+	- Thread safety
+	- Memory efficiency (String Pool)
+	- Better performance (hashcode caching)
+	- Because of immutability, String objects are safe to use in collections like HashMap.
+
+5 What is a String Pool in Java?
+ANS :
+	- SCP (String Constant Pool) is a special memory area inside the Heap memory where Java stores String literals.
+	- To save memory and avoid duplicate String objects.
+	- If two strings have the same value, Java stores only one copy in SCP.
+	- if the same String literal is created again, Java does not create a new object.
+	- It reuses the existing object from the pool to save memory.

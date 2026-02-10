@@ -1,0 +1,63 @@
+1.How are Strings stored in memory? 
+ANS :
+	- In Java, Strings are stored in Heap memory.
+	- There is a special area in heap called String Constant Pool (SCP).
+	- When we create a string using literal ("abc"), it is stored in SCP.
+	- If the same string already exists, Java reuses it (no duplicate object).
+	- If we use new String("abc"), it creates a new object in heap (outside SCP).
+	- Strings are immutable (cannot be changed after creation).
+	Example:
+	
+	String s1 = "Hello";      // stored in SCP
+	String s2 = "Hello";      // reuses same object
+	String s3 = new String("Hello"); // new object in heap
+	
+2 What is an array in Java? 
+ANS :
+	An array is a collection of elements of the same data type.
+	It stores multiple values in a single variable using an index.
+	Example:
+	
+	int[] arr = {10, 20, 30};
+	
+3 How do you declare and initialize an array? 
+ANS :
+	Declaration:
+	- int[] arr;
+	
+	Initialization:
+	- arr = new int[3];
+	
+	
+	OR both together:
+	- int[] arr = {10, 20, 30};
+	
+4 What are jagged arrays? 
+ANS :
+	A jagged array is an array of arrays.
+	Each row can have a different number of columns.
+	It is also called a ragged array.
+	Used when rows do not need equal size.
+	Example:
+	
+	int[][] arr = new int[3][];
+	
+	arr[0] = new int[2];  // 2 columns
+	arr[1] = new int[4];  // 4 columns
+	arr[2] = new int[3];  // 3 columns
+5 What is an ArrayIndexOutOfBoundsException?
+ANS :
+	It occurs when we try to access an index that is less than 0 or greater than array size - 1.
+	
+	Small Example:
+	public class Test {
+	    public static void main(String[] args) {
+	        int[] arr = {10, 20, 30};
+	        System.out.println(arr[3]);  // Error
+	    }
+	}
+	
+	
+	Array size = 3
+	Valid indexes = 0, 1, 2
+	Here we are accessing index 3

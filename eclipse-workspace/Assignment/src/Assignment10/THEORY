@@ -1,0 +1,118 @@
+1.Difference between deep copy and shallow copy. 
+ANS :
+	Shallow Copy
+	- Copies object reference.
+	- Both objects point to same memory.
+	- Changes in one object affect the other.
+	- Default clone() does shallow copy.
+
+	Deep Copy
+	- Copies actual object data.
+	- New object is created with separate memory.
+	- Changes in one object do NOT affect the other
+2 What are varargs in Java? 5
+ANS : 
+	- Varargs means variable-length arguments.
+	- Allows method to accept any number of arguments.
+	- Internally treated as array.
+	
+	Short Example
+	class Demo {
+	    static void add(int... numbers) {
+	        int sum = 0;
+	        for(int n : numbers) {
+	            sum += n;
+	        }
+	        System.out.println("Sum = " + sum);
+	    }
+	
+	    public static void main(String[] args) {
+	        add(10, 20);
+	        add(5, 10, 15);
+	    }
+	}
+	
+3 What is autoboxing and unboxing? 
+ANS :
+	Autoboxing
+	- Converting primitive → Wrapper object automatically.
+	- int → Integer
+
+	Unboxing
+	- Converting Wrapper → primitive automatically.
+	- Integer → int
+	
+		public class Demo {
+	    public static void main(String[] args) {
+	
+	        int a = 10;
+	
+	        Integer obj = a;   // Autoboxing
+	        int b = obj;       // Unboxing
+	
+	        System.out.println(b);
+	    }
+	}
+	
+4 What are the differences between == and equals() for Strings?
+ANS :
+	1. == Operator
+		String s1 = "Java";
+		String s2 = "Java";
+		
+		System.out.println(s1 == s2);  // true
+	
+	- It compares memory reference (address).
+	- Checks whether two references point to the same object in memory.
+	- Does NOT compare actual content.
+	- Works for all objects.
+	
+		Example 1 (Using new keyword)
+		String s1 = new String("Java");
+		String s2 = new String("Java");
+		System.out.println(s1 == s2);  // false
+	
+2. equals() Method
+ANS : 
+	- Defined in Object class.
+	- In String class, it is overridden.
+	- Compares actual content (character by character).
+	- Returns true if content is same.
+	
+		Example
+		String s1 = new String("Java");
+		String s2 = new String("Java");
+		
+		System.out.println(s1.equals(s2));  // true
+
+5 Explain String concatenation and interning.
+ANS :
+	String Concatenation :
+	- String concatenation means joining two or more strings into one.
+	- It can be done using + operator or concat() method.
+	- Since String is immutable, every concatenation creates a new object.
+	- For multiple concatenations, StringBuilder is preferred for better performance.
+	
+		Example:
+		String s1 = "Hello";
+		String s2 = "World";
+		String s3 = s1 + s2;
+		System.out.println(s3);   // HelloWorld
+	
+	String Interning :
+	
+	- String interning is the process of storing string literals in the String Constant Pool (SCP) to avoid duplicate objects and save memory.
+	- If the same string literal already exists in SCP, Java reuses that object instead of creating a new one.
+	
+		Example:
+		String s1 = "Java";
+		String s2 = "Java";
+		System.out.println(s1 == s2);  // true (same SCP reference)
+
+	- If we use new keyword, object is created in heap:
+		String s3 = new String("Java");
+		System.out.println(s1 == s3);  // false
+	- We can use intern() method to move string to SCP.
+	
+	
+	

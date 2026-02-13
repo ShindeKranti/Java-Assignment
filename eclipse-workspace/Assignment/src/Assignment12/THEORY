@@ -1,0 +1,65 @@
+1.What is LinkedList? 
+ANS :
+	- LinkedList is a class in Java Collection Framework that implements the List interface.
+	- It stores elements in nodes.
+	Each node contains:
+	- Data
+	- Address of next node (and previous node in doubly linked list)
+	- It allows duplicate elements.
+	- It maintains insertion order.
+	- Insertion and deletion are faster than ArrayList.
+	- It belongs to java.util package.
+	
+2 Difference between ArrayList and LinkedList. 
+ANS :
+	Data Structure Used
+	- ArrayList is based on a dynamic array, whereas LinkedList is based on a doubly linked list.
+	
+	Memory Allocation
+	- ArrayList uses contiguous memory locations, while LinkedList uses non-contiguous memory locations.
+	
+	Insertion and Deletion
+	- In ArrayList, insertion and deletion are slow because elements need to be shifted.
+	- In LinkedList, insertion and deletion are faster because no shifting is required.
+	
+	Accessing Elements
+	- ArrayList provides fast random access using index numbers.
+	- LinkedList does not provide fast random access and requires traversal.
+	
+	Memory Usage
+	- ArrayList consumes less memory.
+	- LinkedList consumes more memory because it stores additional pointer references.
+	
+3 What is a HashSet? 
+ANS :
+	- HashSet is a class that implements the Set interface.
+	- It does not allow duplicate elements.
+	- It does not maintain insertion order.
+	- It stores elements using a hashing mechanism.
+	- Allows only one null value.
+	- It is best when you want unique elements. 
+	
+4 What is LinkedHashSet?
+ANS :
+	- LinkedHashSet is a subclass of HashSet.
+	- Does not allow duplicates.
+	- Maintains insertion order.
+	
+	Internally uses:
+	- Hash table
+	- Doubly linked list
+	
+	Difference from HashSet:
+	- HashSet → No order
+	- LinkedHashSet → Maintains insertion order
+5 What is TreeSet?
+ANS :
+	- TreeSet is a class that implements the Set interface.
+	- Does not allow duplicate elements.
+	- Stores elements in sorted order.
+	- Uses Red-Black Tree internally.
+	- Does not allow null values (in most cases).
+	Sorting is done by:
+	- Natural ordering
+	- Comparator
+	- Best used when you need unique + sorted data.

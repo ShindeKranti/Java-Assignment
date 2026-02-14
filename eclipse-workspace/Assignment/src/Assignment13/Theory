@@ -1,0 +1,75 @@
+1.Difference between HashSet and TreeSet. 
+ANS :
+	1.HashSet
+		- HashSet is a class that implements the Set interface.
+		- It stores only unique elements.
+		- It does not maintain insertion order.
+		- It uses a hash table internally for storing elements.
+		- It allows only one null element.
+		- It provides constant time performance (O(1)) for basic operations like add, remove, and search.
+		- It is not synchronized.
+		- It is best used when order is not important and fast access is required.
+		
+	2.TreeSet
+		- TreeSet is a class that implements the NavigableSet interface.
+		- It stores only unique elements.
+		- It maintains elements in sorted order.
+		- It uses a Red-Black Tree data structure internally.
+		- It does not allow null elements.
+		- It provides O(log n) time complexity for basic operations.
+		- It is not synchronized.
+		-It is best used when sorted data is required.
+
+2 What is a Map interface? 
+ANS :
+	- Map is an interface available in the java.util package.
+	- It stores elements in the form of key-value pairs.
+	- Each key in a Map must be unique.
+	- A Map can contain duplicate values but not duplicate keys.
+	- Map is not a part of the Collection interface hierarchy
+	- It provides methods such as put(), get(), remove(), and containsKey().
+	- Some commonly used implementations of Map are HashMap, LinkedHashMap, and TreeMap.
+
+3 Difference between HashMap and Hashtable. 
+ANS :
+	HashMap :
+		- HashMap is a class that implements the Map interface.
+		- It stores data in key-value pairs.
+		- It does not maintain any order of keys.
+		- It allows one null key and multiple null values.
+		- It is not synchronized.
+		- It is not thread-safe.
+		- It provides constant time performance (O(1)) for basic operations.
+		- It was introduced in Java 1.2.
+		- It is widely used in modern Java applications.
+		
+	Hashtable :
+		- Hashtable is a class that implements the Map interface.
+		- It stores data in key-value pairs.
+		- It does not maintain insertion order.
+		- It does not allow null keys or null values.
+		- It is synchronized.
+		- It is thread-safe.
+		- It provides O(1) time complexity for basic operations.
+		- It was introduced in Java 1.0.
+		- It is considered a legacy class in modern Java.
+
+4 What is LinkedHashMap? 
+ANS :
+	- LinkedHashMap is a class that extends HashMap.
+	- It maintains the insertion order of elements.
+	- It uses a combination of a hash table and a doubly linked list.
+	- It allows one null key and multiple null values.
+	- It provides predictable iteration order.
+	- It is slightly slower than HashMap due to maintaining order.
+	- It is used when the order of insertion must be preserved.
+	
+5 What is TreeMap?
+ANS :
+	- TreeMap is a class that implements the NavigableMap interface.
+	- It stores key-value pairs in sorted order based on keys.
+	- It uses a Red-Black Tree data structure.
+	- It does not allow null keys.
+	- It allows multiple null values.
+	- It provides O(log n) time complexity for basic operations.
+	- It is used when sorted keys are required.

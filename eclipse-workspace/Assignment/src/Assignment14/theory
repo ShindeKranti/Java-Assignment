@@ -1,0 +1,117 @@
+1.How does HashMap work internally?
+ANS :
+	- HashMap is a class in the java.util package that implements the Map interface. 
+	- It stores data in key-value pairs and allows one null key and multiple null values.
+	1.Internal Structure
+		- Bucket Array (Node Array)
+		- Internally, HashMap uses an array of Node<K,V>.
+		- Each index of the array is called a bucket.
+		- Default initial capacity = 16.
+	2.Hashing Process
+		- When you insert data using put(key, value), HashMap:
+		- Calls key.hashCode()
+		- Applies a hash function to reduce collisions
+		- Calculates index using:
+		- index = (n - 1) & hash
+		- where n = array size
+	3.Storing Data
+		- If bucket is empty → new node is created.
+		- If bucket already has elements → collision handling starts.
+	4.Collision Handling
+		- Before Java 8 → Linked List
+		- From Java 8 → If bucket size > 8 → converted into Red-Black Tree
+		- This improves worst-case time complexity from O(n) to O(log n).
+	5.Equality Check
+		- After finding bucket, HashMap uses:
+		- hashCode() to locate bucket
+		- equals() to compare keys
+		- Resizing (Rehashing)
+		- When threshold exceeds → capacity doubles.
+		- All elements are rehashed and redistributed.
+	
+	-Time Complexity
+		Operation	Average	Worst Case
+		put()		O(1)	O(n)
+		get()		O(1)	O(n) or O(log n) (Java 8+)
+
+
+2.What is load factor in HashMap? 
+ANS :
+	- Load factor is a measure that defines how full the HashMap can be before resizing.
+	- Default Load Factor : 0.75
+	- What happens if load factor is 1.0?
+	- More elements per bucket → more collisions → slower performance.
+	
+	Threshold Formula :
+	
+		Threshold = Capacity × Load Factor
+	Example:
+		
+		Capacity = 16
+		Load factor = 0.75
+		Threshold = 16 × 0.75 = 12
+		After 12 elements → resizing happens.
+
+3 What are generics in Java? 
+ANS :
+	- Generics in Java allow us to create classes, interfaces, and methods that can work with different data types while providing type safety at compile time.
+	- Generics were introduced in Java 5.
+
+	Why Generics Are Needed?
+	- Only specified type is allowed
+	- No need for explicit casting
+	- Errors are detected at compile time
+	
+	ArrayList<String> list = new ArrayList<>();
+	list.add("Hello");
+	
+	- Now only String type is allowed.
+	- Generics provide type safety.
+	- They reduce runtime errors.
+	- They remove the need for type casting.
+	- They improve code readability.
+	- They make code reusable.
+	- Syntax uses angle brackets < >.
+
+4 Why are generics used? 
+ANS :
+	- Generics are used to provide type safety and make code more reliable and reusable.
+	- They ensure that only the specified type of data can be stored in a class or collection.
+	
+	Main Reasons Generics Are Used
+	1️.To Provide Type Safety :
+		- Generics ensure that only the correct type of object is stored.
+		- Errors are detected at compile time, not runtime.
+	
+	2️.To Avoid ClassCastException :
+		- Before generics, type casting was required.
+		- Wrong casting caused runtime errors.
+		- Generics remove the need for explicit casting.
+		
+	3️.To Detect Errors Early :
+		- With generics, mistakes are found during compilation, making debugging easier.
+	
+	4️.To Improve Code Reusability :
+		- A single generic class or method can work with different data types.
+	
+		Example:
+		
+		class Box<T> {
+		    T value;
+		}
+	
+		This works for Integer, String, Double, etc.
+	
+	5️.To Make Code Cleaner and More Readable :
+		No unnecessary type casting.
+		Code becomes simple and professional.
+5 What is type safety?
+ANS :
+	Type safety means that a programming language ensures a variable can only store values of its declared data type.
+	It prevents assigning incompatible data types and catches errors at compile time, making the program more reliable.
+	
+	- Why Type Safety is Important?
+		Prevents runtime errors
+		Detects mistakes early
+		Makes code secure and reliable
+		Improves maintainability

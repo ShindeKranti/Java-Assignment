@@ -1,0 +1,67 @@
+1 Explain fail-fast and fail-safe iterators.
+ANS :
+	Fail-Fast Iterator:
+		- Operates directly on the collection.
+		- If the collection is modified structurally (add/remove elements) after the iterator is created, it throws ConcurrentModificationException.
+		- Example collections: ArrayList, HashMap, HashSet.
+		- Use case: Detects concurrent modification bugs early.
+
+	Fail-Safe Iterator:
+		- Operates on a clone or snapshot of the collection.
+		- Can safely modify the collection while iterating.
+		- Example collections: ConcurrentHashMap, CopyOnWriteArrayList.
+		- Use case: Used in multi-threaded environments to avoid exceptions.
+
+2 What is the Iterator interface?
+ANS :
+	- Definition: Provides a standard way to traverse any collection sequentially.
+	- Package: java.util
+	Key Methods:
+	
+	- boolean hasNext() – checks if more elements exist.
+	- E next() – returns the next element.
+	- void remove() – removes the current element (optional operation).
+	
+	Example:
+	
+	- List<String> list = new ArrayList<>(List.of("A", "B", "C"));
+	- Iterator<String> it = list.iterator();
+	- while(it.hasNext()) {
+	    System.out.println(it.next());
+		} 
+		
+3 What is the ListIterator interface? 
+ANS :
+	- Extends Iterator and works only with List implementations.
+	Key Features:
+	- Can traverse both forward and backward.
+	- Can modify elements using set() or add new elements using add().
+	- Supports index-based iteration with nextIndex() and previousIndex().
+	Key Methods:
+	- boolean hasPrevious(), E previous() – backward traversal.
+	- void set(E e) – replaces last element returned.
+	- void add(E e) – inserts element at current position.
+
+4 What are Comparable and Comparator interfaces? 
+ANS :
+	Comparable Interface:
+	- Defines natural ordering of objects.
+	- Package: java.lang
+	- Method: int compareTo(T obj)
+	- Only one way of comparison per class.
+	- Comparator Interface:
+	- Defines custom or multiple orderings for objects.
+	- Package: java.util
+	Methods:
+	- int compare(T o1, T o2)
+	- boolean equals(Object obj) (optional)
+
+5 Difference between Comparable and Comparator.
+ANS :
+	- Purpose: Comparable defines natural ordering; Comparator defines custom or multiple orderings.
+	- Package: Comparable is in java.lang; Comparator is in java.util.
+	- Method: Comparable uses compareTo(T o); Comparator uses compare(T o1, T o2).
+	- Implementation: Comparable is implemented by the class whose objects are compared; Comparator is implemented by a separate class or lambda.
+	- Number of Orders: Comparable allows only one natural order; Comparator allows multiple custom orders.
+	- Modification: Comparable requires modifying the class; Comparator does not require modifying the class.
+	- Use Case: Comparable is used for default sorting; Comparator is used for flexible, external sorting criteria.

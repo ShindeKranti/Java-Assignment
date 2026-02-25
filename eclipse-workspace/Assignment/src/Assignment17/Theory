@@ -1,0 +1,38 @@
+1.What is a Functional Interface?
+ANS :
+	- A Functional Interface is an interface that contains exactly one abstract method.
+	- It is mainly used to implement Lambda expressions (introduced in Java 8).
+	- It can also have multiple default and static methods.
+	Example:
+	
+		@FunctionalInterface
+		interface Demo {
+		    void show();
+		}
+
+2️.What is the for-each loop used for?
+ANS :
+	- The for-each loop is used to iterate over arrays or collections without using an index.
+	- It simplifies traversal and improves code readability.
+
+3️.Difference between break and continue
+ANS :
+	- break → Terminates the loop completely.
+	- continue → Skips the current iteration and moves to the next iteration.
+
+4️.Explain if-else and switch statements
+ANS :
+	- if-else is used to execute code based on multiple conditions or boolean expressions.
+	- switch is used to compare a single variable against multiple constant values.
+	- if-else is more flexible, while switch is cleaner when checking one variable against many values.
+
+5️.What is an Enhanced for loop?
+ANS :
+	- The Enhanced for loop (also called for-each loop) is a simplified loop introduced in Java 5 to iterate 
+	- through arrays and collections.
+	
+	Syntax:
+	
+	for(DataType var : collection) {
+	    // code
+	}

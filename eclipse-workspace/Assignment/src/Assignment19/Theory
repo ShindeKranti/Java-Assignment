@@ -1,0 +1,97 @@
+1 How to create your own package? 
+ANS :
+A package in Java is used to group related classes and interfaces.
+	1.Write package packageName; at the top of your Java file.
+		Example:
+		package mypackage;
+	
+	2️.Create and write your class inside that file.
+	
+	3️.Save the file with the class name (e.g., Demo.java).
+	
+	4️.Compile the file using:
+	
+		javac -d . Demo.java
+	
+	5️.A folder with the package name (mypackage) will be created automatically.
+	
+	6️.To use this package in another class, write:
+	import mypackage.Demo;
+	
+2 What is a marker interface? 
+ANS :
+	- A marker interface is an empty interface (no methods) used to provide special information to the JVM.
+	It is also called a tag interface.
+	Example:
+	
+	 Java provides:
+	
+		- Serializable
+		- Cloneable
+		- RandomAccess
+	
+	Example Code:
+		import java.io.Serializable;
+		
+		class Student implements Serializable {
+		    int id;
+		}
+	
+	- Here, Serializable tells JVM that the object can be serialized.
+	
+	Key Points:
+	- Contains no methods.
+	- Used to give special behavior to a class.
+	- Checked using instanceof.
+	
+3 What is serialization and deserialization? 
+ANS :
+	- Serialization is the process of converting an object into a byte stream so that it can be:
+	- Stored in a file
+	- Sent over a network
+	- Saved in a database
+	-In Java, this is done using:
+	- Serializable interface (marker interface)
+	-ObjectOutputStream class
+	- It is mainly used to save the state of an object.
+	
+	Deserialization 
+	- Deserialization is the process of converting a byte stream back into an object.
+	- In Java, this is done using:
+	- ObjectInputStream class
+	- It restores the original object from the stored file.
+	
+4 What is the transient keyword? 
+ANS :
+	- The transient keyword is used to prevent a variable from being serialized.
+	- If a variable is declared as transient, it will not be saved during serialization.
+		Example:
+		class Student implements Serializable {
+		    int id;
+		    transient String password;
+		}
+		
+	- Here, password will not be stored in file.
+	
+	Key Points:
+	
+	- Used only with instance variables.
+	- Used for security purposes.
+	- Value becomes default after deserialization.
+
+5 What is the difference between interface and abstract class (real-time example)?
+ANS :
+	1.Interface defines only abstract methods (pure behavior), whereas Abstract class can define both abstract and concrete methods.
+	2️.Interface supports multiple inheritance (a class can implement multiple interfaces), whereas Abstract class does not support multiple inheritance (a class can extend only one abstract class).
+	3️.Interface variables are by default public, static, and final, whereas Abstract class can have normal instance variables.
+	4️.Interface does not have constructors, whereas Abstract class can have constructors.
+	5️.Interface methods are by default public, whereas Abstract class methods can have different access modifiers (public, protected, private).
+	6️.Interface is used to achieve 100% abstraction, whereas Abstract class is used to achieve partial abstraction.
+	
+	Real-Time Example
+	
+	Interface → Example: Remote Control
+	Many devices (TV, AC, Fan) implement the same remote functions.
+	
+	Abstract Class → Example: Vehicle
+	All vehicles have common properties (engine, wheels) but different implementation of start method.

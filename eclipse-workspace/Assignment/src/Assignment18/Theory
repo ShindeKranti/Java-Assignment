@@ -1,0 +1,45 @@
+1.Difference Between while and do-while Loop (3 Marks)
+
+	while loop checks condition before execution, whereas do-while loop checks condition after execution.
+	while loop may execute zero times, whereas do-while loop executes at least once.
+	while loop is entry-controlled loop, whereas do-while loop is exit-controlled loop.
+
+2️.Difference Between return and System.exit() (5 Marks)
+
+	return statement exits from the current method, whereas System.exit() terminates the entire program.
+	return transfers control back to the calling method, whereas System.exit() stops JVM execution completely.
+	return can return a value (if method has return type), whereas System.exit() does not return value; it ends program.
+	return is used inside methods, whereas System.exit() can be used anywhere in program.
+	return does not stop finally block execution, whereas System.exit() may not execute finally block.
+
+3️.What are Checked and Unchecked Exceptions? (6 Marks)
+	Checked Exceptions:
+	- Checked at compile time.
+	- Must be handled using try-catch or throws.
+	- Example: IOException, SQLException.
+	
+	Unchecked Exceptions:
+	- Occur at runtime.
+	- Not checked at compile time.
+	- Handling is optional.
+	- Example: ArithmeticException, NullPointerException.
+	
+
+4️.Difference Between throw and throws (6 Marks)
+	- throw is used to explicitly throw an exception, whereas throws is used to declare exceptions.
+	- throw is used inside method body, whereas throws is used in method signature.
+	- throw is followed by an exception object, whereas throws is followed by exception class names.
+	-throw can throw only one exception at a time, whereas throws can declare multiple exceptions.
+	- throw transfers control to catch block, whereas throws passes responsibility to caller method.
+
+5.What is a Custom Exception? (Interview Ready)
+
+	- A custom exception is a user-defined exception created by extending the Exception class.
+	- It is used to handle application-specific errors.
+	
+	Example:
+	class InvalidAgeException extends Exception {
+	    InvalidAgeException(String message) {
+	        super(message);
+	    }
+	}

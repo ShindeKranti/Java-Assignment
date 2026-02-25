@@ -1,0 +1,83 @@
+1.Explain constructor chaining.
+ANS :
+	- Constructor chaining is the process of calling one constructor from another constructor within the same 
+	- class or from a parent class.
+		
+	It is done using:
+	- this() → Calls constructor of same class	
+	- super() → Calls constructor of parent class
+	
+	Example:
+	class Parent {
+	    Parent() {
+	        System.out.println("Parent constructor");
+	    }
+	}
+	
+	class Child extends Parent {
+	    Child() {
+	        super();   // calls Parent constructor
+	        System.out.println("Child constructor");
+	    }
+	}
+	
+	- Used to initialize parent class properties.
+	- super() must be the first statement in constructor.
+	- Helps in code reusability.
+	
+2 Can a constructor be overridden? 
+ANS :
+	- No, constructors cannot be overridden.
+	Reason:
+	- Constructor is not inherited by child class.
+	- Overriding happens only when a method is inherited.
+	- Constructor name is same as class name, so it cannot be overridden.
+
+3 What is the difference between static and instance variables?
+ANS :
+
+	- Static variables belong to the class, whereas instance variables belong to the object.
+	- Static variables are shared among all objects, whereas instance variables are separate for each object.
+	- Static variables are created only once in memory, whereas instance variables are created every time an object is created.
+	- Static variables can be accessed using the class name, whereas instance variables are accessed using object reference.
+	- Static variables do not depend on object creation, whereas instance variables depend on object creation.
+	- Changes made to a static variable affect all objects, whereas changes made to an instance variable affect only that particular object.
+
+4 What is method hiding? 
+ANS :
+	- Method hiding occurs when a child class defines a static method with the same name as a static 
+	method in parent class.
+	- It is different from method overriding.
+	
+	Example:
+	class Parent {
+	    static void display() {
+	        System.out.println("Parent");
+	    }
+	}
+	
+	class Child extends Parent {
+	    static void display() {
+	        System.out.println("Child");
+	    }
+	}
+	
+	If called using:
+	Parent obj = new Child();
+	obj.display();
+	
+	Output: Parent
+	
+	- Why?
+	- Because static methods are resolved at compile time (not runtime).
+	- This is called method hiding, not overriding.
+	
+5 What are the limitations of Java?
+ANS :
+	- No multiple inheritance (with classes)
+	- Slower than C/C++ (because of JVM and bytecode)
+	- No direct memory management (no pointers)
+	- More memory consumption
+	- Not suitable for low-level programming (like OS, drivers)
+	
+	
